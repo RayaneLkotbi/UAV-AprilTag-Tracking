@@ -32,3 +32,20 @@ error_y = CenterY - tag_y
 ```
 
 These values represent the target offset from the center of the camera image and can later be used to command lateral corrections during UAV alignment.
+
+## Performance Benchmark
+
+![AprilTag benchmark results](Media/benchmark_results.jpg)
+
+The detection pipeline was benchmarked at a resolution of 640 × 480 to evaluate real-time performance.
+
+Example results:
+
+* Average frame rate: **34.6 FPS**
+* Detection percentage: **71.5%**
+* Average detection time per frame: **15.2 ms**
+* Average full-loop time: **23.1 ms**
+
+The detection percentage represents the fraction of processed frames in which the AprilTag was successfully identified during the test interval.
+
+The benchmark separates AprilTag detection time from the total loop time to estimate the processing overhead introduced by camera capture, visualization, and program execution.
