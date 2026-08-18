@@ -49,3 +49,30 @@ Example results:
 The detection percentage represents the fraction of processed frames in which the AprilTag was successfully identified during the test interval.
 
 The benchmark separates AprilTag detection time from the total loop time to estimate the processing overhead introduced by camera capture, visualization, and program execution.
+
+## Project Structure
+
+```text
+UAV-AprilTag-Tracking/
+├── src/
+│   ├── apriltag_tracker.py
+│   ├── apriltag_detection_test.py
+│   └── camera_fps_test.py
+├── Media/
+│   ├── hardware_setup.jpg
+│   ├── live_detection.jpg
+│   └── benchmark_results.jpg
+└── README.md
+```
+
+### `apriltag_tracker.py`
+
+Main vision pipeline. Performs AprilTag detection, calculates the target centroid and X/Y alignment error, displays live detection feedback, and records performance metrics.
+
+### `apriltag_detection_test.py`
+
+Detection-only benchmark used to evaluate AprilTag processing throughput without the overhead of live visualization.
+
+### `camera_fps_test.py`
+
+Camera baseline test used to measure image capture and display performance independently of AprilTag detection.
