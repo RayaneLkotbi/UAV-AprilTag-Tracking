@@ -1,2 +1,13 @@
-# UAV-AprilTag-Tracking
-Real-time AprilTag detection and pixel-space UAV target alignment using Raspberry Pi, Picamera2, and OpenCV.
+# UAV AprilTag Tracking
+
+Real-time AprilTag detection and pixel-space target alignment developed on a Raspberry Pi for UAV visual guidance experiments.
+
+The system uses a Raspberry Pi camera, Picamera2, and OpenCV to detect an AprilTag target, estimate its center in image coordinates, and calculate horizontal and vertical alignment error relative to the camera frame.
+
+This project was developed as part of UAV integration and autonomous landing experimentation for SAE Aero Design.
+
+## Hardware Setup
+
+![Raspberry Pi and camera hardware](Media/hardware_setup.jpg)
+
+Raspberry Pi and camera setup used for onboard AprilTag processing.
