@@ -11,3 +11,24 @@ This project was developed as part of UAV integration and autonomous landing exp
 ![Raspberry Pi and camera hardware](Media/hardware_setup.jpg)
 
 Raspberry Pi and camera setup used for onboard AprilTag processing.
+
+## Live Detection
+
+![Live AprilTag detection](Media/live_detection.jpg)
+
+The vision pipeline detects the AprilTag in real time and computes its center relative to the camera frame.
+
+For a 640 × 480 image, the camera center is:
+
+```text
+(320, 240)
+```
+
+The detected tag center is calculated from the average position of its four corners. The resulting alignment error is reported as:
+
+```text
+error_x = tag_x - CenterX
+error_y = CenterY - tag_y
+```
+
+These values represent the target offset from the center of the camera image and can later be used to command lateral corrections during UAV alignment.
